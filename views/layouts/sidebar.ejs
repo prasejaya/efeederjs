@@ -1,0 +1,116 @@
+<% 
+  var role = session.eFeeder.login.role;
+%>
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside class="left-sidebar">
+  <!-- Sidebar scroll-->
+  <div class="scroll-sidebar">
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav">
+        <li> <a class="waves-dark" href="/beranda" aria-expanded="false">
+          <i class="icon-home"></i><span class="hide-menu">Beranda</span></a>
+        </li>
+        <li> <a class="waves-dark" href="/mahasiswa" aria-expanded="false">
+          <i class="fa fa-user-circle"></i><span class="hide-menu">Mahasiswa</span></a>
+        </li>
+        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+          <i class="fa fa-mortar-board"></i><span class="hide-menu">Akademik</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a href="/kul-perwalian"><i class="fa-address-card"></i>&nbsp; Periode Perkuliahan </a></li>
+            <li><a href="/kul-alihbentuk"><i class="fa-address-card"></i>&nbsp; Mhs Alih Bentuk </a></li>
+            <li><a href="/kul-konversi"><i class="fa fa-building"></i>&nbsp; Konversi Nilai </a></li>
+            <li><a href="/kul-mahasiswa-cuti"><i class="fa fa-mortar-board"></i>&nbsp; Cuti / Non Aktif (SK Cuti / Non Aktif Mahasiswa)</a></li>
+            <li><a href="/kul-matkul"><i class="fa fa-address-book"></i>&nbsp;&nbsp; Mapping Matkul </a></li>
+            <li><a href="/kurikulum"><i class="fa fa-address-book"></i>&nbsp;&nbsp; Kurikulum </a></li>
+            <li><a href="/kul-matkulkurikulum"><i class="fa fa-address-book"></i>&nbsp;&nbsp; Matkul Per Kur </a></li>
+            <li><a href="/kul-matkulpemb"><i class="fa fa-address-book"></i>&nbsp;&nbsp; R Pembelajaran </a></li>
+            <li><a href="/kul-matkuleval"><i class="fa fa-address-book"></i>&nbsp;&nbsp; Rencana Evaluasi </a></li>
+            <li><a href="/kul-kelas"><i class="fa fa-building"></i>&nbsp; Kelas Perkuliahan </a></li>
+            <li><a href="/kul-peserta"><i class="fa-address-card"></i>&nbsp;&nbsp; Peserta Kelas </a></li>
+            <li><a href="/kul-nilai"><i class="fa fa-calculator"></i>&nbsp;&nbsp; Nilai Perkuliahan </a></li>
+            <li><a href="/kul-perwalian"><i class="fa fa-address-book"></i>&nbsp;&nbsp; Aktivitas Kuliah </a></li>
+            <li><a href="/kul-realisasiajar"><i class="fa fa-address-book"></i>&nbsp;&nbsp; Rencana & Realisasi Ajar Dosen</a></li>
+            <li><a href="/kul-penugasan"><i class="fa fa-address-book"></i>&nbsp;&nbsp;Info Penugasan</a></li>
+            <li><a href="/kul-mengajar"><i class="fa fa-address-book"></i>&nbsp;&nbsp;Info Mengajar</a></li>
+            <li><a href="/kul-nidn"><i class="fa fa-address-book"></i>&nbsp;&nbsp;Info NIDN</a></li>
+            <li><a href="/kul-tugasakhir"><i class="fa fa-users"></i>&nbsp; Tugas Akhir (Pembimbing TA)</a></li>
+            <li><a href="/kul-pembimbingtugasakhir"><i class="fa fa-users"></i>&nbsp; Pembimbing (Pembimbing TA)</a></li>
+            <li><a href="/kul-ujitugasakhir"><i class="fa fa-users"></i>&nbsp; Tugas Akhir (Penguji TA)</a></li>
+            <li><a href="/kul-pengujitugasakhir"><i class="fa fa-users"></i>&nbsp; Pembimbing (Penguji TA)</a></li>
+            <li><a href="/kul-pembimbingakademik"><i class="fa fa-suitcase"></i>&nbsp; Pembimbing Akademik </a></li>
+            <li><a href="/kul-transkrip"><i class="fa fa-suitcase"></i>&nbsp; Transkrip </a></li>
+            <li><a href="/kul-yudisium"><i class="fa fa-suitcase"></i>&nbsp; Yudisium & Kelulusan </a></li>
+            <li><a href="/kul-mahasiswa-lulus"><i class="fa fa-mortar-board"></i>&nbsp; Mahasiswa Lulus/ Keluar</a></li>
+          </ul>
+        </li>
+        <li>
+        <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+          <i class="fa fa-mortar-board"></i><span class="hide-menu">MBKM</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a href="/mbkm-perkuliahan"><i class="fa-address-card"></i>&nbsp; Konversi Perkuliahan </a></li>
+            <li><a href="/mbkm-kegiatan"><i class="fa fa-building"></i>&nbsp; Konversi Kegiatan </a></li>
+          </ul>
+        </li>
+        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+          <i class="ti-layout-media-right-alt"></i><span class="hide-menu">Referensi</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a href="/map-jenjang-pendidikan"><i class="fa fa-angle-double-right"></i>&nbsp; Jenjang Pendidikan </a></li>
+            <li><a href="/map-program-studi"><i class="fa fa-angle-double-right"></i>&nbsp; Program Studi</a></li>
+            <li><a href="/map-agama"><i class="fa fa-angle-double-right"></i>&nbsp; Agama </a></li>
+            <li><a href="/map-negara"><i class="fa fa-angle-double-right"></i>&nbsp; Negara</a></li>
+            <li><a href="/map-statuskeluar"><i class="fa fa-angle-double-right"></i>&nbsp; Status Keluar</a></li>
+            <li><a href="/map-statuspengeluaran"><i class="fa fa-angle-double-right"></i>&nbsp; Status Pengeluaran</a></li>
+            <li><a href="/map-wilayah"><i class="fa fa-angle-double-right"></i>&nbsp; Wilayah</a></li>
+            <li><a href="/map-jenistugasakhir"><i class="fa fa-angle-double-right"></i>&nbsp; Jenis Tugas Akhir</a></li>
+            <li><a href="/map-skala-nilai"><i class="fa fa-angle-double-right"></i>&nbsp; Skala Nilai</a></li>
+            <li><a href="/map-dosen"><i class="fa fa-angle-double-right"></i>&nbsp; Dosen</a></li>
+            <li><a href="/map-jenispendaftaran"><i class="fa fa-angle-double-right"></i>&nbsp; Jenis Pendaftaran</a></li>
+            <li><a href="/map-kategorikegiatan"><i class="fa fa-angle-double-right"></i>&nbsp; Kategori Kegiatan</a></li>
+            <li><a href="/map-jalurmasuk"><i class="fa fa-angle-double-right"></i>&nbsp; Jalur Masuk</a></li>
+            <li><a href="/map-settingkelas"><i class="fa fa-angle-double-right"></i>&nbsp; Setting Kelas</a></li>
+          </ul>
+        </li>
+        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+          <i class="fa fa-cogs"></i><span class="hide-menu">Pengaturan</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a href="/set-prodi"><i class="fa fa-home"></i><span class="hide-menu">&nbsp; Program Studi</a></li>
+            <% if(role == 'SP' || role == 'AA') { %>
+            <li><a href="/set-akun-feeder"><i class="fa fa-unlock-alt"></i><span class="hide-menu">&nbsp; Akun Feeder</a></li>
+            <% } %>
+            <% if(role == 'SP') { %>
+            <li><a href="/set-pengguna"><i class="fa fa-user"></i><span class="hide-menu">&nbsp; Pengguna </a></li>
+            <% } %>
+          </ul>
+        </li>
+        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+          <i class="fa fa-mortar-board"></i><span class="hide-menu">Log</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <li><a href="/log-mahasiswa"><i class="fa fa-angle-double-right"></i>&nbsp; Mahasiswa </a></li>
+            <li><a href="/log-matakuliah"><i class="fa fa-angle-double-right"></i>&nbsp; Matakuliah</a></li>
+            <li><a href="/log-kurikulum"><i class="fa fa-angle-double-right"></i>&nbsp; Kurikulum</a></li>
+            <li><a href="/log-kelas"><i class="fa fa-angle-double-right"></i>&nbsp; Kelas</a></li>
+            <li><a href="/log-krs"><i class="fa fa-angle-double-right"></i>&nbsp; KRS</a></li>
+            <li><a href="/log-mengajar"><i class="fa fa-angle-double-right"></i>&nbsp; Mengajar</a></li>
+            <li><a href="/log-perwalian"><i class="fa fa-angle-double-right"></i>&nbsp; Perwalian</a></li>
+            <li><a href="/log-transkrip"><i class="fa fa-angle-double-right"></i>&nbsp; Transkrip</a></li>
+          </ul>
+        </li>
+        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+          <i class="fa fa-file"></i><span class="hide-menu">Laporan</span></a>
+          <ul aria-expanded="false" class="collapse">
+            <% var tahun = new Date().getFullYear(); %>
+            <li><a target="_blank" href="/lap-bio-mahasiswa&act=lap&tahun=<%= tahun %>"><i class="fa fa-angle-double-right"></i><span class="hide-menu">&nbsp; Biodata Mahasiswa</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- End Sidebar navigation -->
+  </div>
+  <!-- End Sidebar scroll-->
+</aside>
+<!-- ============================================================== -->
+<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
